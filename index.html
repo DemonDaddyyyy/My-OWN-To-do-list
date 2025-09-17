@@ -1,0 +1,72 @@
+<!-- Oi Bianca do futuro ehehehe. Este é o projeto de uma To'do list. Você adora To'do lists, então, com o tempo, 
+ vamos criar uma que você possa realmente utilizar no seu dia a dia.
+
+ . Estética - Estilo AnyDo
+ . Coluna: Task
+ . Quando a tarefa estiver em "finalizado" riscar e mandar para o fim da lista.
+
+ FUTURAMENTE - UPDATES:
+
+ . Mensagem de saudação (bom dia, Bianca; Boa noite, Bianca)
+ . Coluna: Status (não iniciado, a ser feito, incompleto e finalizado)
+ . Filtrar tasks por data
+ . Opção de apagar task
+ . Coluna de urgencia (Não prioritario, Prioritario, Urgente)
+ . Adicionar lembretes - ligação com o calendário
+ 
+ PRIMEIRO:
+
+ . ESTRUTURAR SITE
+ . TORNAR FUNCIONAL
+
+ DEPOIS:
+ . ESTÉTICA
+ -->
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To'Do List</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+    <header>
+        <img src="./images/logo.png" alt="Logotipo Undraw">
+        <h1>Hello!</h1>
+    </header>
+    <form id="form-todo">
+        <input type="text" id="task" required placeholder="Add Task" />
+
+        <!-- <input type="text" id="status" required placeholder="Status"/> -->
+
+        <button type="submit"> Adicionar Tarefa</button>
+    </form>
+    <table cellspacing="0">
+        <thead>
+            <tr>
+                <th> Task</th>
+                <!-- <th>Status</th> -->
+            </tr>
+            
+        </thead>
+        <tbody>
+            </tbody>
+    </table>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
