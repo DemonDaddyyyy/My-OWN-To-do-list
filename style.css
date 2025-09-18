@@ -28,6 +28,24 @@ header {
     color: #fff;
  }
 
+ @media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header img {
+        height: 150px; /* reduz só no celular */
+        margin-right: 0;
+        margin-bottom: 16px;
+    }
+
+    header h1 {
+        font-size: 28px;
+        text-align: center;
+    }
+}
+
  .container {
     max-width: 960px;
     width: 100%;
@@ -60,6 +78,19 @@ header {
     padding: 8px;
  }
 
+@media (max-width: 480px) {
+    form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    form input, form button {
+        width: 100%;
+        margin-bottom: 8px;
+        font-size: 18px; /* menor no celular */
+    }
+}
+
  table {
     width: 100%;
     color: #fff;
@@ -83,6 +114,32 @@ table td img {
     height: 30px;
 }
 
+@media (max-width: 768px) {
+    table, thead, tbody, th, td, tr {
+        display: block; /* deixa linhas empilhadas */
+    }
+
+    table th {
+        display: none; /* opcional: esconde cabeçalho no celular */
+    }
+
+    tbody tr {
+        margin-bottom: 12px;
+        border-bottom: 2px solid rgba(255,255,255,0.1);
+        padding: 8px;
+    }
+
+    tbody td {
+        text-align: left;
+        padding: 4px 8px;
+        font-size: 16px;
+    }
+
+    td:last-child {
+        text-align: right; /* mantém botão à direita */
+    }
+}
+
 /* Codigo abaixo feito com ajuda do ChatGPT */
 
 .completed {
@@ -95,3 +152,53 @@ tbody tr:hover {
   background-color: rgba(255, 255, 255, 0.1); /* opcional: muda fundo ao passar o mouse */
 }
 
+.delete-btn {
+  background: none;   /* remove fundo cinza */
+  border: none;       /* remove borda padrão */
+  cursor: pointer;    /* deixa com a "mãozinha" */
+  padding: 0;         /* tira espaçamento interno */
+}
+
+.delete-btn img {
+  width: 30px;        /* controla tamanho do ícone */
+  height: 30px;
+  display: block;     /* evita espaçamento extra dentro do botão */
+}
+
+td:last-child {
+  text-align: right;
+  width: 1%;          /* mantém a coluna do botão compacta */
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    form input, form button {
+        font-size: 18px;
+    }
+
+    table th {
+        font-size: 18px;
+    }
+
+    table td {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding-top: 50px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .delete-btn img {
+        width: 24px;
+        height: 24px;
+    }
+}
